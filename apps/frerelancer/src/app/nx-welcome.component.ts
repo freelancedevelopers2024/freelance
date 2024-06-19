@@ -1,12 +1,11 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatChipsModule} from '@angular/material/chips';
-
+import { NavComponent } from '../../../../ui-components/src/lib/nav/nav.component';
 
 @Component({
   selector: 'app-nx-welcome',
   standalone: true,
-  imports: [CommonModule,MatChipsModule],
+  imports: [CommonModule, NavComponent],
   template: `
     <!--
      * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -428,9 +427,6 @@ import {MatChipsModule} from '@angular/material/chips';
         }
       }
     </style>
-
-<mat-chip disabled>Angular Material esta funcionando !!!</mat-chip>
-
 
     <div class="wrapper">
       <div class="container">
