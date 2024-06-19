@@ -5,7 +5,7 @@ import { NavComponent } from 'ui-components/src/lib/nav/nav.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule, NavComponent, RouterModule],
+  imports: [NxWelcomeComponent, RouterModule, NavComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
