@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { NavButton } from '../ui-models/nav-button';
 @Component({
   selector: 'lib-nav',
   standalone: true,
@@ -18,4 +19,8 @@ import { RouterModule, Routes } from '@angular/router';
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css',
 })
-export class NavComponent {}
+export class NavComponent {
+
+  @Input() buttons: NavButton[] = [];
+  
+}
