@@ -1,3 +1,9 @@
 .spacer {
     flex: 1 1 auto;
 }
+
+.custom-toolbar {
+    background: #000 !important;
+    color: white !important;
+}
+

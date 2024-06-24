@@ -1,0 +1,14 @@
+.cards-list {
+    margin: 16px;
+  }
+  
+  .image-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .image-slider img {
+    max-width: 100%;
+    max-height: 200px;
+  }

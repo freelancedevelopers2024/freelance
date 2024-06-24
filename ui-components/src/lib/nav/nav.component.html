@@ -1,9 +1,7 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="custom-toolbar">
     <span>Freelancers</span>
     <span class="spacer"></span>
-    <button mat-button routerLink="/">Home</button>
-    <button mat-button routerLink="/about-us">About Us</button>
-    <button mat-button routerLink="/services">Services</button>
-    <button mat-button routerLink="/portfolio">Portfolio</button>
-    <button mat-button routerLink="/contact">Contact</button>
+    <ng-container *ngFor="let button of buttons">
+      <button class="custom-toolbar" mat-button [routerLink]="button.route">{{ button.name }}</button>
+    </ng-container>
 </mat-toolbar>
