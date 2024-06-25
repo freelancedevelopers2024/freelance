@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .form-container, .info-container {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  mat-card {
+    padding: 20px;
+    background-color: #fafafa;
+  }
+  
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+  }

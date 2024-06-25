@@ -1,1 +1,45 @@
-<p>contact works!</p>
+<div class="container">
+    <div class="form-container">
+      <mat-card>
+        <mat-card-title>Contact Us</mat-card-title>
+        <mat-card-content>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-field">
+              <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" placeholder="Your Name" required>
+              </mat-form-field>
+            </div>
+            <div class="form-field">
+              <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email" placeholder="Your Email" required>
+              </mat-form-field>
+            </div>
+            <div class="form-field">
+              <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Subject</mat-label>
+                <input matInput formControlName="subject" placeholder="Subject" required>
+              </mat-form-field>
+            </div>
+            <div class="form-field">
+              <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Message</mat-label>
+                <textarea matInput formControlName="message" placeholder="Your Message" maxlength="500"></textarea>
+                <mat-hint align="end">{{contactForm.get('message')?.value?.length || 0}} / 500</mat-hint>
+              </mat-form-field>
+            </div>
+            <button mat-raised-button color="primary" type="submit" class="submit-button">Send</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="info-container">
+      <mat-card>
+        <mat-card-title>Contact Information:</mat-card-title>
+        <mat-card-content>
+          <p>Email: ************gmail.com</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
