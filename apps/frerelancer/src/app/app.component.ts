@@ -4,6 +4,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { NavButton,NavComponent } from '@angular-monorepo/ui-components';
 
 
+
 @Component({
   standalone: true,
   imports: [NxWelcomeComponent, RouterModule, NavComponent],
@@ -21,5 +22,5 @@ export class AppComponent {
     { name: 'Portfolio', route: '/portfolio' },
     { name: 'Contact', route: '/contact' }
   ];
-  
+
 }
