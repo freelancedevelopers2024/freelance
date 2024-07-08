@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { NavComponent } from 'ui-components/src/lib/nav/nav.component';
-import { NavButton } from 'ui-components/src/lib/ui-models/nav-button';
+import { NavButton,NavComponent } from '@angular-monorepo/ui-components';
+
 
 @Component({
   standalone: true,
