@@ -1,0 +1,109 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.image-banner {
+    background-image: url('apps/frerelancer/assets/images/Modern Minimalist Simple Technology Banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.banner-description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #80808086;
+    max-width: 90%;
+}
+
+h1 {
+    font-family: 'Arial Bold';
+    font-size: 50px;
+    color: rgb(0, 238, 255);
+}
+
+h3 {
+    font-family: 'Arial Bold';
+    font-size: 25px;
+    color: rgb(0, 238, 255);
+}
+
+.cards-list {
+    margin: 16px;
+}
+
+.image-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-slider img {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.custom-card {
+    margin-right: 32px;
+    min-height: var(--card-min-height, auto);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 960px) {
+    .image-banner {
+        height: 50vh;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .custom-card {
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-banner {
+        height: 40vh;
+    }
+
+    .banner-description {
+        bottom: 10px;
+        left: 10px;
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .custom-card {
+        margin-right: 8px;
+    }
+}
