@@ -1,22 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CardsListComponent } from 'ui-components/src/lib/cards-list/cards-list.component';
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CardsListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
   cards = [
-    { title: 'Card 1', content: 'This is the content of card 1.' },
-    { title: 'Card 2', content: 'This is the content of card 2.' },
-    { title: 'Card 3', content: 'This is the content of card 3.' },
-    { title: 'Card 4', content: 'This is the content of card 4.' },
-    { title: 'Card 5', content: 'This is the content of card 5.' },
-    { title: 'Card 6', content: 'This is the content of card 6.' }
+    {
+      title: 'Desarrollo web',
+      subtitle: 'Ofrecemos servicios de desarrollo web de primera categoría para crear sitios web atractivos y con capacidad de respuesta.',
+    },
+    {
+      title: 'Desarrollo de aplicaciones',
+      subtitle: 'Nuestro equipo destaca en la creación de aplicaciones móviles de alto rendimiento tanto para plataformas Android como iOS.',
+    },
+    {
+      title: 'Diseño UI/UX',
+      subtitle: 'Diseñamos interfaces y experiencias fáciles de usar que cautivan y retienen a los usuarios.',
+    }
   ];
+  gridCols = 3;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.adjustGridCols((event.target as Window).innerWidth);
+  }
+
+  ngOnInit() {
+    this.adjustGridCols(window.innerWidth);
+  }
+
+  adjustGridCols(width: number) {
+    if (width < 600) {
+      this.gridCols = 1;
+    } else if (width < 960) {
+      this.gridCols = 2;
+    } else {
+      this.gridCols = 3;
+    }
+  }
 }
