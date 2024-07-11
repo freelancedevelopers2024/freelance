@@ -12,3 +12,10 @@
     max-width: 100%;
     max-height: 200px;
   }
+  
+  .cards-list .custom-card {
+    margin-right: 32px; /* Ajusta este valor según lo necesites */
+    min-height: var(--card-min-height, auto);
+ 
+  }
+

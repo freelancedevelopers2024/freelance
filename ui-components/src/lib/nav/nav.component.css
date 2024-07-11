@@ -1,9 +1,59 @@
-.spacer {
-    flex: 1 1 auto;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 64px; /* Altura del menú */
 }
 
-.custom-toolbar {
-    background: #000 !important;
-    color: white !important;
+.nav-container.mobile-menu {
+  justify-content: flex-start;
 }
 
+.logo-text {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+  margin-right: 10px;
+  background-image: url('../../../../apps/frerelancer/assets/images/FrereLancer.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px;
+}
+
+.site-title {
+  font-size: 20px; /* Ajusta el tamaño del texto del título según sea necesario */
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.desktop-menu button {
+  margin: 0 10px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 960px) {
+  .nav-container {
+    padding: 0 10px;
+  }
+  
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
+  
+  .site-title {
+    display: none;
+  }
+  
+  .nav-container.mobile-menu .logo-text {
+    margin-right: auto;
+  }
+}
