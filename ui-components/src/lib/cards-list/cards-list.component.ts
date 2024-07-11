@@ -20,6 +20,10 @@ import { MatIconModule } from '@angular/material/icon';
 export class CardsListComponent {
 
   @Input() items: any[] = [];
+  
+  @Input() images: boolean = false;
+  
+  @Input() gridCols: number = 3; // Añadir esta línea
 
   nextImage(item: any): void {
     if (item.currentImage === undefined) {
@@ -34,5 +38,4 @@ export class CardsListComponent {
     }
     item.currentImage = (item.currentImage - 1 + item.images.length) % item.images.length;
   }
-
 }

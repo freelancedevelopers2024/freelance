@@ -1,23 +1,23 @@
 <div class="cards-list">
-    <mat-grid-list cols="3" rowHeight="2:1">
-      <mat-grid-tile *ngFor="let item of items">
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>{{ item.title }}</mat-card-title>
-            <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <div class="image-slider">
-              <button mat-icon-button (click)="prevImage(item)">
-                <mat-icon>chevron_left</mat-icon>
-              </button>
-              <img [src]="item.images[item.currentImage]" alt="{{ item.title }}">
-              <button mat-icon-button (click)="nextImage(item)">
-                <mat-icon>chevron_right</mat-icon>
-              </button>
-            </div>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
+  <mat-grid-list [cols]="gridCols" rowHeight="2:1" gutterSize="16px">
+    <mat-grid-tile *ngFor="let item of items">
+      <mat-card class="custom-card">
+        <mat-card-header>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+          <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="image-slider" *ngIf="images">
+            <button mat-icon-button (click)="prevImage(item)">
+              <mat-icon>chevron_left</mat-icon>
+            </button>
+            <img [src]="item.images[item.currentImage]" alt="{{ item.title }}">
+            <button mat-icon-button (click)="nextImage(item)">
+              <mat-icon>chevron_right</mat-icon>
+            </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

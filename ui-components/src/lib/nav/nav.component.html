@@ -1,7 +1,26 @@
-<mat-toolbar class="custom-toolbar">
-    <span>Freelancers</span>
-    <span class="spacer"></span>
+<div class="nav-container" [class.mobile-menu]="isMobile">
+  <!-- Logo y texto -->
+  <div class="logo-text">
+    <div class="logo"></div> 
+    <span class="site-title" *ngIf="!isMobile">FrereLancer</span>
+  </div>
+
+  <!-- Botón de hamburguesa para dispositivos móviles -->
+  <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="isMobile">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <!-- Menú de hamburguesa -->
+  <mat-menu #menu="matMenu">
     <ng-container *ngFor="let button of buttons">
-      <button class="custom-toolbar" mat-button [routerLink]="button.route">{{ button.name }}</button>
+      <button mat-menu-item [routerLink]="button.route">{{ button.name }}</button>
     </ng-container>
-</mat-toolbar>
+  </mat-menu>
+
+  <!-- Menú horizontal completo para otros dispositivos -->
+  <div class="desktop-menu" *ngIf="!isMobile">
+    <ng-container *ngFor="let button of buttons">
+      <button mat-button [routerLink]="button.route">{{ button.name }}</button>
+    </ng-container>
+  </div>
+</div>

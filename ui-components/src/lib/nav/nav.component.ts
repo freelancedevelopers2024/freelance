@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { NavButton } from '../ui-models/nav-button';
+
 @Component({
   selector: 'lib-nav',
   standalone: true,
@@ -20,7 +21,8 @@ import { NavButton } from '../ui-models/nav-button';
   styleUrl: './nav.component.css',
 })
 export class NavComponent {
-
   @Input() buttons: NavButton[] = [];
-  
+  @Input() isMobile = false;
+
+  constructor() { }
 }
