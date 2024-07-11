@@ -5,23 +5,26 @@ body {
   min-height: 100vh;
 }
 
-.titulo {
+ .mcTitle {
   display: flex;
   justify-content: center;
+  margin: 1% 0;
+}
+
+img{
+  height: 15em ;
+
 }
 
 .example-card {
   max-width: 400px;
-}
-
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+  margin: 1%;
 }
 
 .cards {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .example-button-row {
@@ -33,8 +36,10 @@ body {
 .mFBtn {
   background-color: black;
   color: white;
+  border: solid black 1px;
 }
 
+/*
 .footer {
   background-color: black;
   color: white;
@@ -44,4 +49,59 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: auto;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+  */
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .example-card {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 480px) {
+  body {
+    margin: 1%;
+  }
+
+  .titulo h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .mcTitle {
+    font-size: 1.2em;
+  }
+
+  .example-card {
+    width: 100%;
+    max-width: none;
+    margin: 0.5% 0;
+  }
+
+  .example-button-row {
+    margin-top: 5%;
+  }
+
+  .mFBtn {
+    width: 80%;
+    font-size: 1em;
+  }
+
+  /*
+  .footer {
+    padding: 10px;
+    font-size: 0.8em;
+  }
+    */
 }
