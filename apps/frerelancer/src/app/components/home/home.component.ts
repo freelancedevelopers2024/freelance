@@ -2,6 +2,8 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsListComponent } from 'ui-components/src/lib/cards-list/cards-list.component';
 
+
+
 @Component({
   selector: 'app-home',
   standalone: true,

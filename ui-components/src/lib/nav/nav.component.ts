@@ -22,5 +22,5 @@ import { NavButton } from '../ui-models/nav-button';
 export class NavComponent {
 
   @Input() buttons: NavButton[] = [];
-  
+
 }
