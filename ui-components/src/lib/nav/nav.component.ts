@@ -22,7 +22,12 @@ import { NavButton } from '../ui-models/nav-button';
 })
 export class NavComponent {
   @Input() buttons: NavButton[] = [];
+<<<<<<< HEAD
   @Input() isMobile = false;
 
   constructor() { }
 }
+=======
+
+}
+>>>>>>> develop

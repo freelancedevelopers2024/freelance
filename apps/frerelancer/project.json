@@ -24,7 +24,9 @@
           {
             "glob": "**/*",
             "input": "apps/frerelancer/public"
-          }
+          },
+      "apps/frerelancer/src"
+
         ],
         "styles": [
           "@angular/material/prebuilt-themes/indigo-pink.css",
